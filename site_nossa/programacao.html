@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TXRWDXM2TS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-TXRWDXM2TS');
+</script>
+    <meta name="robots" content="noindex, nofollow">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <title>Programação - Nossa Sertaneja</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css?v=4.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="imagens/Design sem nome (4).png" type="image/png">
+    <link rel="icon" href="imagens/Design sem nome (4).png" type="image/png">
+    <style>
+        .prog-page-body {
+            background-color: #000;
+            color: #fff;
+         
+        }
+        .prog-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        .prog-days-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin-bottom: 50px;
+            flex-wrap: wrap;
+        }
+        .day-tab {
+            background: transparent;
+            border: none;
+            color: #888;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
+        .day-tab.active, .day-tab:hover {
+            color: #D07600;
+            border-bottom: 2px solid #D07600;
+        }
+        .on-air-highlight {
+            background: rgba(255, 102, 0, 0.1);
+            border: 1px solid #D07600;
+            border-radius: 15px;
+            padding: 25px;
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+        .on-air-highlight::before {
+            content: 'AO VIVO';
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            background: #D07600;
+            color: #000;
+            padding: 4px 12px;
+            border-radius: 5px;
+            font-size: 12px;
+            font-weight: 900;
+            animation: blink 1s infinite;
+        }
+        .on-air-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 15px;
+            object-fit: cover;
+            border: 2px solid #D07600;
+        }
+        .on-air-info h2 {
+            font-size: 32px;
+            margin: 5px 0;
+            color: #fff;
+        }
+        .on-air-info p {
+            color: #D07600;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        .prog-list-vertical {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            border-top: 1px solid #222;
+        }
+        .prog-row {
+            display: flex;
+            align-items: center;
+            padding: 15px 0;
+            border-bottom: 1px solid #222;
+            gap: 20px;
+            transition: background 0.3s;
+        }
+        .prog-row:hover {
+            background: rgba(255, 255, 255, 0.03);
+        }
+        .prog-row-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .prog-row-info {
+            flex: 1;
+        }
+        .prog-row-name {
+            font-size: 20px;
+            font-weight: bold;
+            color: #fff;
+        }
+        .prog-row-sub {
+            font-size: 14px;
+            color: #888;
+        }
+        .prog-row-time {
+            font-size: 14px;
+            color: #D07600;
+            font-weight: bold;
+            min-width: 100px;
+            text-align: right;
+        }
+        .locutores-section {
+            margin-top: 80px;
+            text-align: center;
+        }
+        .locutores-section h3 {
+            font-size: 36px;
+            text-transform: uppercase;
+            margin-bottom: 40px;
+            color: #fff;
+        }
+        .locutores-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+            justify-items: center;
+            align-items: start;
+        }
+
+        @media (max-width: 768px) {
+            .locutores-grid {
+                grid-template-columns: 1fr 1fr; 
+                gap: 15px;
+            }
+            .locutor-circle {
+                width: 100px;
+                height: 100px;
+            }
+        }
+        .locutor-card {
+            text-align: center;
+        }
+        .locutor-circle {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 4px solid #D07600;
+            padding: 5px;
+            margin-bottom: 15px;
+            transition: transform 0.3s;
+        }
+        .locutor-circle:hover {
+            transform: scale(1.1);
+        }
+        .locutor-circle img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .locutor-card .locutor-name-text {
+            display: block;
+            font-weight: bold;
+            font-size: 16px;
+            color: #fff;
+            margin-bottom: 8px;
+        }
+        .locutor-insta-link {
+            color: #fff;
+            font-size: 20px;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+        .locutor-insta-link:hover {
+            color: #D07600;
+            transform: scale(1.2);
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        .prog-banner-section {
+            position: relative;
+            width: 100%;
+            height: 350px; 
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .prog-banner-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+        }
+
+        .prog-banner-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.8) 100%);
+            z-index: 2;
+        }
+        .banner-decor-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .banner-decor-item {
+            position: absolute;
+            opacity: 0.4;
+        }
+
+        .decor-rotate {
+            animation: banner-rotate 15s linear infinite;
+        }
+
+        .decor-float {
+            animation: banner-float 6s ease-in-out infinite;
+        }
+        .decor-1 { top: 10%; left: 35%; width: 200px; }
+        .decor-2 { top: 60%; left: 15%; width: 220px; }
+        .decor-3 { top: 20%; right: 10%; width: 100px; }
+        .decor-4 { top: 66%; right: 5%; width: 390px; }
+        .decor-5 { top: 40%; left: 66%; width: 200px; opacity: 0.2; }
+
+        @keyframes banner-rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        @keyframes banner-float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .prog-banner-content {
+            position: relative;
+            z-index: 3;
+            text-align: center;
+            width: 100%;
+            max-width: 1200px;
+            padding: 0 20px;
+        }
+
+        .prog-banner-content h2 {
+            font-size: 64px;
+            font-weight: 900;
+            margin-bottom: 15px;
+            color: #fff;
+            text-transform: none;
+            font-family: 'Roboto Slab', serif;
+        }
+
+        .prog-breadcrumb {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .prog-breadcrumb a {
+            color: #D07600;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .prog-breadcrumb a:hover {
+            color: #fff;
+        }
+
+        .prog-breadcrumb span {
+            color: #D07600;
+        }
+
+        .prog-breadcrumb .separator {
+            color: #fff;
+            margin: 0 5px;
+        }
+
+        .prog-mini-icon {
+            width: 30px;
+            height: 30px;
+            object-fit: contain;
+            margin-right: 5px;
+        }
+
+        .breadcrumb-item-wrapper {
+            display: flex;
+            align-items: center;
+        }
+
+        @media (max-width: 768px) {
+            html, body {
+                overflow-x: hidden;
+                width: 100%;
+                position: relative;
+            }
+            .banner-decor-container {
+                display: none; 
+            }
+
+            .prog-banner-section {
+                height: 200px;
+            }
+            .prog-banner-content h2 {
+                font-size: 32px;
+            }
+            .prog-breadcrumb {
+                font-size: 12px;
+            }
+            #sub {
+                height: auto;
+                padding: 10px;
+                flex-direction: column;
+            }
+            #social {
+                padding-left: 0;
+                margin-bottom: 10px;
+            }
+            .top-player {
+                padding: 10px;
+                flex-direction: column;
+                gap: 10px;
+                width: 100%;
+                height: auto;
+            }
+            
+            .city-selector-new {
+                margin-left: 0;
+                width: auto;
+                max-width: 120px;
+                justify-content: center;
+            }
+            #locutor-box-new {
+                border-left: none;
+                padding-left: 0;
+                width: 100%;
+                justify-content: center;
+                margin-top: 5px;
+            }
+            .prog-row {
+                gap: 10px;
+            }
+            .prog-row-name {
+                font-size: 16px;
+            }
+            .prog-row-time {
+                min-width: 80px;
+                font-size: 12px;
+            }
+            
+            .locutores-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .floating-highlight-container {
+                display: none;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .prog-banner-section {
+                height: 150px;
+            }
+            .prog-banner-content h2 {
+                font-size: 28px;
+            }
+            .locutores-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body class="prog-page-body">
+<button id="backToTop" class="back-to-top">
+  <i class="fas fa-chevron-up"></i>
+</button>
+
+  <nav id="sub">
+  <div id="social">
+    <ul>
+<li><a href="https://web.facebook.com/people/Nossa-Fm-tv/pfbid02EXT4iPZtWsGoLwrueUK7NMqjXmFzvfWW3a5aTkB7E5K9QQ4nwMFrXoGiWbuAAMy5l/?fb_profile_edit_entry_point=%7B%22click_point%22%3A%22edit_profile_button%22%2C%22feature%22%3A%22profile_header%22%7D&sk=about" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
+      <li><a href="https://www.instagram.com/nossasertaneja/" target="_blank"><i class="fa-brands fa-instagram"></a></i></li>
+      <li><a href="https://x.com/nossafm973/" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
+      <li> <a  href="https://wa.me/5508003663232?text=Olá%20Nossa%20Sertaneja!"target="_blank"><i class="fa-brands fa-whatsapp"></i></a></li>
+
+    </ul>
+  </div>
+
+   <div class="top-player">
+                <div class="play-container-new">
+                    <button id="main-play-btn" class="play-circle-red">
+                        <i class="fas fa-play"></i>
+                    </button>
+                </div>
+                
+                <div class="player-info-new">
+                    <div class="status-text-new"><span class="dot">●</span> <span class="live-dot"></span>AO VIVO</div>
+                    <div id="programa-mini" class="program-name-new"></div>
+                    <div id="programa-horario" class="program-time-new"></div>
+                </div>
+
+                <div class="city-selector-new">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <select id="city-selector" class="city-select-new">
+                        <option value="https://8541.brasilstream.com.br/stream?origem=site">MACAPÁ 100.5 FM</option>
+                        <option value="https://8516.brasilstream.com.br/stream?origem=site">SETE LAGOAS 107.7 FM</option>
+                        <option value="https://8500.brasilstream.com.br/stream?origem=site">BARBACENA 99.7 FM</option>
+                        <option value="https://8504.brasilstream.com.br/stream?origem=site">LAMBARI 107.1 FM</option>
+                        <option value="https://8502.brasilstream.com.br/stream?origem=site">BUENO BRANDÃO 102.5 FM</option>
+                        <option value="https://8514.brasilstream.com.br/stream?origem=site">PRADÓPOLIS 88.5 FM</option>
+                        <option value="https://8498.brasilstream.com.br/stream?origem=site">PARACATU 97.3 FM</option> 
+                    </select>
+                </div>
+
+                <div id="locutor-box-new">
+                    <img src="imagens/henrique.png" alt="Locutor" class="locutor-thumb-new" id="dj-image-mini">
+                    <div class="locutor-info-new">
+                        <span class="locutor-name-new" id="dj-name-mini"></span>
+                    </div>
+                </div>
+            </div>
+</nav>
+
+      <nav class="navbar">
+        <div class="navbar-container">
+            <div class="nav-logo"></div>
+            <button class="menu-toggle" id="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                 <li class="menu-close-li"><button class="menu-close-btn" id="menu-close-btn"><i class="fas fa-times"></i></button></li>
+                <li><a href="index.html">NOSSA SERTANEJA</a></li>
+                <li><a href="index.html#premios">PROMOÇÕES</a></li>
+                <li><a href="#ta-no-ar">PROGRAMAÇÃO</a></li>
+                <li><a href="noticias.html">NOTÍCIAS</a></li>
+                <li><a href="nossatv.html">NOSSA TV</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <section class="prog-banner-section">
+        <img src="imagens/banner1.png" alt="Banner Programação" class="prog-banner-img">
+        
+
+        <div class="banner-decor-container">
+            <img src="imagens/sem fundo x.png" alt="Decor" class="banner-decor-item decor-1 decor-rotate">
+            <img src="imagens/sem fundo x.png" alt="Decor" class="banner-decor-item decor-2 decor-float">
+            <img src="imagens/sem fundo x.png" alt="Decor" class="banner-decor-item decor-3 decor-float">
+            <img src="imagens/sem fundo x.png" alt="Decor" class="banner-decor-item decor-4 decor-rotate">
+            <img src="imagens/sem fundo x.png" alt="Decor" class="banner-decor-item decor-5 decor-float">
+        </div>
+
+        <div class="prog-banner-overlay"></div>
+        <div class="prog-banner-content">
+            <h2>Programação</h2>
+            <div class="prog-breadcrumb">
+                <div class="breadcrumb-item-wrapper">
+                    <img src="imagens/Design sem nome (4).png" alt="Ícone" class="prog-mini-icon">
+                    <a href="index.html">Início</a>
+                </div>
+                <span class="separator">/</span>
+                <span>Programação</span>
+            </div>
+        </div>
+    </section>
+
+ <div class="floating-highlight-container">
+      <img src="imagens/sem fundo.png" alt="Microfone Sertanejo" class="big-mic-hat">
+    </div>
+
+    <div class="prog-container">
+        <div class="prog-days-tabs">
+            <div class="day-tab" data-day="domingo">Domingo</div>
+            <div class="day-tab" data-day="segunda">Segunda</div>
+            <div class="day-tab" data-day="terca">Terça</div>
+            <div class="day-tab" data-day="quarta">Quarta</div>
+            <div class="day-tab" data-day="quinta">Quinta</div>
+            <div class="day-tab" data-day="sexta">Sexta</div>
+            <div class="day-tab" data-day="sabado">Sábado</div>
+        </div>
+
+        <div id="on-air-now-container">
+        </div>
+
+
+        <div class="prog-list-vertical" id="full-program-list">
+        </div>
+
+        <div class="locutores-section">
+            <h3>Locutores</h3>
+            <div class="locutores-grid" id="locutores-gallery">
+        
+            </div>
+        </div>
+    </div>
+
+<footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="imagens/Design sem nome.png" alt="Nossa Sertaneja">
+            </div>
+
+            <div class="footer-section footer-contacts">
+                <h2 class="highlight-brown">Contatos</h2>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>0800 366 3232</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>contato@nossasertaneja.com.br</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>
+                            Minas Gerais / MG
+                    </div>
+                </div>
+            </div>
+
+        
+            <div class="footer-section footer-phone">
+                <div class="phone-mockup">
+                    <div class="phone-screen">
+                        <img src="imagens/app.jpeg" alt="Nossa Sertaneja App" class="phone-app-image">
+                    </div>
+                </div>
+            </div>
+            <div class="footer-section footer-about">
+                <h2>Baixe nosso<br><span class="highlight-brown">Aplicativo</span></h2>
+                <p class="about-text">
+                    Leve a Nossa Sertaneja para onde você for! Baixe agora nosso app oficial para ouvir a melhor programação sertaneja ao vivo, participar de promoções exclusivas e ficar por dentro de todas as novidades. É a rádio da alegria, agora na palma da sua mão!
+                </p>
+           
+      <div class="app-badges">
+        <a href="https://play.google.com/store/apps/details?id=com.nossasertaneja.app&hl=pt_BR" target="_blank" rel="noopener noreferrer" aria-label="Baixar no Google Play" class="app-badge-link">
+          <img src="imagens/play-store-black.png" alt="Disponível no Google Play" class="app-badge-img">
+        </a>
+        <a href="https://apps.apple.com/br/search?term=nossa+sertaneja" target="_blank" rel="noopener noreferrer" aria-label="Baixar na App Store" class="app-badge-link">
+          <img src="imagens/app-store-black.png" alt="Baixar na App Store" class="app-badge-img">
+        </a>
+      </div>
+
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-bottom-container">
+                <div class="footer-copyright">
+                    <p>2026 - Todos os direitos reservados</p>
+                    <p>Nossa Sertaneja - É minha, é sua, é nossa!</p>
+                </div>
+                <div class="footer-social">
+                    <a href="https://web.facebook.com/people/Nossa-Fm-tv/pfbid02EXT4iPZtWsGoLwrueUK7NMqjXmFzvfWW3a5aTkB7E5K9QQ4nwMFrXoGiWbuAAMy5l/?fb_profile_edit_entry_point=%7B%22click_point%22%3A%22edit_profile_button%22%2C%22feature%22%3A%22profile_header%22%7D&sk=about" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://x.com/nossafm973/" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/nossasertaneja/" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/5508003663232?text=Olá%20Nossa%20Sertaneja!" target="_blank" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script1.js?v=1.5"></script>
+    <script src="script.js?v=1.5"></script>
+    <script src="radio_player_dynamic.js?v=1.5"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const listContainer = document.getElementById('full-program-list');
+            const onAirContainer = document.getElementById('on-air-now-container');
+            const galleryContainer = document.getElementById('locutores-gallery');
+            const tabs = document.querySelectorAll('.day-tab');
+        
+            const locutores = [
+           
+                { nome: "Renatinha Cordeiro", img: "https://ik.imagekit.io/jcnanzhvq/20260430-181733-jpg.jpg" }, 
+                { nome: "Kabellinho", img: "https://ik.imagekit.io/jcnanzhvq/20260507-114229-jpg%20(1).jpg" },
+                { nome: "Henrique Barbosa", img: "https://ik.imagekit.io/jcnanzhvq/20260430-195319-jpg.jpg" } 
+            ];
+
+            function renderGallery() {
+                galleryContainer.innerHTML = '';
+                locutores.forEach(l => {
+                    const card = document.createElement('div');
+                    card.className = 'locutor-card';
+                    card.innerHTML = `
+                        <div class="locutor-circle"><img src="${l.img}" alt="${l.nome}"></div>
+                        <span class="locutor-name-text">${l.nome}</span>
+                        </a>
+                    `;
+                    galleryContainer.appendChild(card);
+                });
+            }
+
+            function renderProgramacao(dia) {
+                listContainer.innerHTML = '';
+                onAirContainer.innerHTML = '';
+                const programas = programacaoSemanal[dia];
+                const agora = new Date();
+                const hoje = ['domingo', 'segunda', 'terca', 'quarta', 'quinta', 'sexta', 'sabado'][agora.getDay()];
+                const minAtual = agora.getHours() * 60 + agora.getMinutes();
+
+                programas.forEach(p => {
+                    const [hIni, mIni] = p.inicio.split(':').map(Number);
+                    const [hFim, mFim] = p.fim === "00:00" ? [24, 0] : p.fim.split(':').map(Number);
+                    const isNow = (dia === hoje) && minAtual >= (hIni * 60 + mIni) && minAtual < (hFim * 60 + mFim);
+
+                    if (isNow) {
+                        onAirContainer.innerHTML = `
+                            <div class="on-air-highlight">
+                                <img src="${p.img}" alt="${p.locutor}" class="on-air-img">
+                                <div class="on-air-info">
+                                    <p>${p.inicio} - ${p.fim}</p>
+                                    <h2>${p.locutor}</h2>
+                                    <span>${p.programa}</span>
+                                </div>
+                            </div>
+                        `;
+                    }
+
+                    const row = document.createElement('div');
+                    row.className = 'prog-row';
+                    row.innerHTML = `
+                        <img src="${p.img}" alt="${p.locutor}" class="prog-row-img">
+                        <div class="prog-row-info">
+                            <div class="prog-row-name">${p.locutor}</div>
+                            <div class="prog-row-sub">${p.programa}</div>
+                        </div>
+                        <div class="prog-row-time">${p.inicio} - ${p.fim}</div>
+                    `;
+                    listContainer.appendChild(row);
+                });
+            }
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    tabs.forEach(t => t.classList.remove('active'));
+                    tab.classList.add('active');
+                    renderProgramacao(tab.dataset.day);
+                });
+            });
+
+            const dias = ['domingo', 'segunda', 'terca', 'quarta', 'quinta', 'sexta', 'sabado'];
+            const hoje = dias[new Date().getDay()];
+            const activeTab = document.querySelector(`.day-tab[data-day="${hoje}"]`);
+            if (activeTab) activeTab.click();
+            
+            renderGallery();
+        });
+    </script>
+</body>
+</html>

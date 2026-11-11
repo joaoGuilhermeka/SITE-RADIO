@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TXRWDXM2TS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-TXRWDXM2TS');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Nossa Sertaneja</title>
+    <meta name="description" content="Leve a Nossa Sertaneja para onde você for! Ouça a melhor programação sertaneja ao vivo, participe de promoções exclusivas e fique por dentro das notícias.">
+    <meta name="robots" content="index, follow, max-image-preview:none">
+    <link rel="canonical" href="https://www.nossasertaneja.com.br/">
+    <meta property="og:title" content="Nossa Sertaneja">
+    <meta property="og:description" content="Leve a Nossa Sertaneja para onde você for! Ouça a melhor programação sertaneja ao vivo, participe de promoções exclusivas e fique por dentro das notícias.">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css?v=4.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="imagens/favicon.ico" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <meta name="theme-color" content="#ea974b">
+    <meta name="format-detection" content="telephone=no">
+</head>
+
+<body>
+    
+<button id="backToTop" class="back-to-top">
+  <i class="fas fa-chevron-up"></i>
+</button>
+
+<div id="splash">
+  <img src="imagens/sem fundo.png">
+</div>
+
+  <nav id="sub">
+  <div id="social">
+    <ul>
+      <li><a href="https://web.facebook.com/people/Nossa-Fm-tv/pfbid02EXT4iPZtWsGoLwrueUK7NMqjXmFzvfWW3a5aTkB7E5K9QQ4nwMFrXoGiWbuAAMy5l/?fb_profile_edit_entry_point=%7B%22click_point%22%3A%22edit_profile_button%22%2C%22feature%22%3A%22profile_header%22%7D&sk=about" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
+      <li><a href="https://www.instagram.com/nossasertaneja/" target="_blank"><i class="fa-brands fa-instagram"></a></i></li>
+      <li><a href="https://x.com/nossafm973/" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
+      <li> <a  href="https://wa.me/5508003663232?text=Olá%20Nossa%20Sertaneja!"target="_blank"><i class="fa-brands fa-whatsapp"></i></a></li>
+    </ul>
+  </div>
+
+   <div class="top-player">
+                <div class="play-container-new">
+                    <button id="main-play-btn" class="play-circle-red">
+                        <i class="fas fa-play"></i>
+                    </button>
+                </div>
+                
+                <div class="player-info-new">
+                    <div class="status-text-new"><span class="dot">●</span> <span class="live-dot"></span>AO VIVO</div>
+                    <div id="programa-mini" class="program-name-new"></div>
+                    <div id="programa-horario" class="program-time-new"></div>
+                </div>
+
+                <div class="city-selector-new">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <select id="city-selector" class="city-select-new">
+                        <option value="https://8541.brasilstream.com.br/stream?origem=site">MACAPÁ 100.5 FM</option>
+                        <option value="https://8516.brasilstream.com.br/stream?origem=site">SETE LAGOAS 107.7 FM</option>
+                        <option value="https://8500.brasilstream.com.br/stream?origem=site">BARBACENA 99.7 FM</option>
+                        <option value="https://8504.brasilstream.com.br/stream?origem=site">LAMBARI 107.1 FM</option>
+                        <option value="https://8502.brasilstream.com.br/stream?origem=site">BUENO BRANDÃO 102.5 FM</option>
+                        <option value="https://8514.brasilstream.com.br/stream?origem=site">PRADÓPOLIS 88.5 FM</option>
+                        <option value="https://8498.brasilstream.com.br/stream?origem=site">PARACATU 97.3 FM</option>     
+                    </select>
+                </div>
+
+                <div id="locutor-box-new">
+                    <img src="imagens/henrique.png" alt="Locutor" class="locutor-thumb-new" id="dj-image-mini">
+                    <div class="locutor-info-new">
+                        <span class="locutor-name-new" id="dj-name-mini"></span>
+                    </div>
+                </div>
+            </div>
+</nav>
+
+
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="nav-logo">
+            </div>
+            <button class="menu-toggle" id="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li class="menu-close-li"><button class="menu-close-btn" id="menu-close-btn"><i class="fas fa-times"></i></button></li>
+                <li><a href="#">NOSSA SERTANEJA</a></li>
+                <li><a href="#premios">PROMOÇÕES</a></li>
+                <li><a href="#ta-no-ar">PROGRAMAÇÃO</a></li>
+                <li><a href="noticias.html">NOTÍCIAS</a></li>
+                <li><a href="nossatv.html">NOSSA TV</a></li>
+            </ul>
+        </div>
+    </nav>
+
+ <div class="floating-highlight-container">
+      <img src="imagens/sem fundo.png" alt="Microfone Sertanejo" class="big-mic-hat">
+    </div>
+
+   
+    <section class="hero-section">
+                <div class="hero-floating-container">
+            <div class="hero-floating-img hero-size-sm h-img-1">
+                <img src="imagens/hero_floating.png" alt="Decorativo">
+            </div>
+            <div class="hero-floating-img hero-size-md h-img-2">
+                <img src="imagens/hero_floating.png" alt="Decorativo">
+            </div>
+	            <div class="hero-floating-img hero-size-md h-img-9">
+	                <img src="imagens/E minha.png" alt="Decorativo">
+	            </div>
+	            <div class="hero-floating-img hero-size-lg h-img-3">
+	                <img src="imagens/E minha.png" alt="Decorativo">
+	            </div>
+            <div class="hero-floating-img hero-size-xl h-img-4">
+                <img src="imagens/hero_floating.png" alt="Decorativo">
+            </div>
+            <div class="hero-floating-img hero-size-md h-img-5">
+                <img src="imagens/hero_floating.png" alt="Decorativo">
+            </div>
+            <div class="hero-floating-img hero-size-sm h-img-6">
+                <img src="imagens/hero_floating.png" alt="Decorativo">
+            </div>
+            <div class="hero-floating-img hero-size-lg h-img-7">
+                <img src="imagens/hero_floating.png" alt="Decorativo">
+            </div>
+            <div class="hero-floating-img hero-size-md h-img-8">
+                <img src="imagens/hero_floating.png" alt="Decorativo">
+        </div>
+    </div>
+       
+        <div class="hero-container">
+	            <div class="video-wrapper" id="tv-player-container" style="cursor: pointer; background: #000;">
+	                <img src="imagens/tvaovivo.png" alt="Assistir TV" id="tv-placeholder">
+                <div id="play-tv-btn" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 80px; height: 80px; background: rgba(217, 117, 23, 0.8); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 40px; transition: 0.3s; z-index: 10;">
+                    <i class="fas fa-play"></i>
+                </div>
+                <iframe 
+                    id="tv-iframe"
+                    data-src="https://player.jmvstream.com/lvw/hCk4wZXJ7khxcrkcV0yLt5cSNH7JkS"
+                    src=""
+                    frameborder="0"
+                    allow="autoplay; fullscreen"
+                    allowfullscreen
+                    style="display: none;">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+
+<div id="meu-player"></div>
+<script src="radio_player_dynamic.js?v=1.1"></script>
+    <section class="prizes-section" id="premios">
+   
+        <div class="skyline-top"></div>
+        <div class="skyline-decoration-right"></div>
+        
+        <div class="prizes-container">
+            
+            <div class="prizes-header">
+        <div class="titulo-wrapper">
+        <img src="imagens/sem fundo x.png" alt="" class="x-img">
+        <span class="triangle-text-prizes">PRÊMIOS</span>
+    </div>
+            </div>
+
+            <div class="carousel-main-wrapper">
+                <div class="carousel-viewport">
+<div class="carousel-track" id="prize-track">
+                        
+                    </div>
+                </div>
+  
+                <div class="carousel-nav-arrows">
+                    <button class="nav-arrow prev" id="prev-prize"><i class="fa-solid fa-angle-left"></i></button>
+                    <button class="nav-arrow next" id="next-prize"><i class="fa-solid fa-angle-right"></i></button>
+                </div>
+            </div>
+
+            <div class="prizes-actions">
+                <button class="btn-participate">QUERO PARTICIPAR</button>
+                <button class="btn-rules">REGULAMENTO DO PRÊMIO</button>
+            </div>
+        </div>
+    </section>
+
+
+    <div id="rulesModal" class="rules-modal">
+        <div class="rules-modal-content">
+            <div class="rules-modal-header">
+                <h2 id="rulesModalTitle">REGULAMENTO</h2>
+            </div>
+            <div class="rules-modal-body">
+                <div id="rulesModalText" class="rules-text-container">
+                </div>
+            </div>
+            <div class="rules-modal-footer">
+                <button id="closeRulesModal" class="btn-close-rules">FECHAR</button>
+            </div>
+        </div>
+    </div>
+
+
+    <section class="news-promo-section">
+        <div class="news-promo-container">
+    
+            <div class="news-column">
+                <div class="news-header-styled">
+                    <span class="news-title-badge">NOTÍCIAS</span>
+                </div>
+                
+              
+                <div class="featured-carousel-wrapper">
+                    <div class="featured-carousel-main" id="featured-carousel-main">
+                        
+                    </div>
+                    <div class="featured-carousel-dots" id="featured-carousel-dots">
+                    
+                    </div>
+                </div>
+                
+                <div class="news-list-jk">
+                   
+                </div>
+                <div class="news-footer-jk">
+                    <button class="btn-ver-mais-jk"><a href="noticias.html">VER MAIS NOTÍCIAS</a></button>
+                </div>
+            </div>
+
+                       <div class="featured-column-right" id="banner-destaque" style="background-image: url('imagens/noticia.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+
+            </div>
+        </div>
+    </section>
+
+       
+        <section class="on-air-section" id="ta-no-ar">
+            <div class="on-air-container">
+                <div class="on-air-header">
+                 <div class="titulo-wrapper">
+        <img src="imagens/sem fundo x.png" alt="" class="x1-img">
+                        <span class="triangle-text">Programação</span>
+                    </div>
+                </div>
+                
+                <div class="programs-display">
+                 
+                    <div class="program-card prev-program" id="card-prev">
+                        <div class="card-time" id="prev-time">20:00 - 22:00</div>
+                        <div class="card-content">
+                            <div class="card-img-wrapper">
+                                <img src="https://via.placeholder.com/80" alt="Locutor" class="card-locutor-img" id="prev-img">
+                            </div>
+                            <div class="card-info">
+                                <h4 class="card-locutor-name" id="prev-name"></h4>
+                                <p class="card-program-name" id="prev-program"></p>
+                            </div>
+                        </div>
+                    </div>
+
+             
+                    <div class="program-card current-program" id="card-current">
+                        <div class="card-badges">
+                            <span class="badge-live"><span class="dot">●</span> NO AR</span>
+                            <span class="badge-time" id="current-time-range">22:00 - 00:00</span>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-img-wrapper">
+                                <img src="https://via.placeholder.com/100" alt="Locutor" class="card-locutor-img" id="current-img">
+                            </div>
+                            <div class="card-info">
+                                <h4 class="card-locutor-name" id="current-name"></h4>
+                                <p class="card-program-name" id="current-program"></p>
+                                <button class="card-play-btn" id="on-air-play-btn"><i class="fas fa-play"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                      <div class="program-card next-program" id="card-next">
+                        <div class="card-time" id="next-time">00:00 - 04:00</div>
+                        <div class="card-content">
+                            <div class="card-img-wrapper">
+                                <img src="https://via.placeholder.com/80" alt="Locutor" class="card-locutor-img" id="next-img">
+                            </div>
+                            <div class="card-info">
+                                <h4 class="card-locutor-name" id="next-name"></h4>
+                                <p class="card-program-name" id="next-program"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="on-air-footer">
+                    <a href="programacao.html" class="btn-full-schedule">Veja nossa programação</a>
+                </div>
+            </div>
+        </section>
+      
+ <section class="pesquisa-section">
+       
+            <div class="bg-floating bg-left-1"><img src="imagens/hero_floating.png" alt=""></div>
+            <div class="bg-floating bg-left-2"><img src="imagens/hero_floating.png" alt=""></div>
+            <div class="bg-floating bg-middle"><img src="imagens/hero_floating.png" alt=""></div>
+
+            <div class="pesquisa-container">
+                <div class="pesquisa-content">
+                    <div class="pesquisa-image">
+                        <img src="imagens/Entre em Contato (800 x 1600 px) (1).png" alt="IMAGEM PEDE TOCA" class="img-desktop">
+                        <img src="imagens/pede_toca_mobile.png" alt="IMAGEM PEDE TOCA MOBILE" class="img-mobile">
+                    </div>
+                    
+                    <div class="pesquisa-text">
+                        <h5>Pede Toca<br> Nossa Manhã</h5>
+                        <p class="pesquisa-highlight">Das 11h às 12h, o microfone é seu!
+                            Mande seu pedido de música exclusivamente por <br> áudio e participe do Pede Toca.</p>
+                       
+                        <a href="https://wa.me/5508003663232?text=Olá!%20Seja%20bem-vindo(a)%20à%20Nossa%20Sertaneja.%0A%0APara%20pedir%20sua%20música%20no%20Pede%20Toca,%20envie%20um%20ÁUDIO%20informando:%0ANome,%20Cidade%20/%20Bairro%20e%20a%20música%20que%20você%20quer%20ouvir.%0A%0AÉ%20rápido%20e%20fácil!%0A%0ANossa%20Sertaneja%20-%20É%20minha,%20é%20sua,%20é%20nossa!" target="_blank" class="btn-comecar">PEÇA AGORA!</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    <div id="tudop">
+     
+        <div class="conta">
+            
+        <div class="header">
+            <div class="titulo-wrapper-top10">
+                <img src="imagens/sem fundo x.png" alt="" class="x-top10-img">
+                <h1>Top 10 da Nossa</h1>
+            </div>
+        </div>
+
+        <section class="carousel-section">
+            
+            <div class="carousel-container">
+         
+                <div class="carousel-wrapper">
+                   
+                    <div class="carousel">
+                      
+                 <div class="carousel-item">
+                    <a href="#" class="card" onclick="abrirVideo('1jlDqubhZvU')">
+                    <img src="https://i.ytimg.com/vi/1jlDqubhZvU/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLAJgsMON8FIbGgi-rMoDD2exXUlrQ" alt="">
+                        <div class="card-number">1</div>
+                        </a>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="#" class="card" onclick="abrirVideo('sp1ubzi3Yiw')">
+                                <img src="https://i.ytimg.com/vi/sp1ubzi3Yiw/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLDnYDPU56nu-UlY0nzODNIo5aqnvA" alt="">
+                                <div class="card-number">2</div>
+                            </a>
+                        </div>
+
+                        <div class="carousel-item">
+                            <a href="#" class="card" onclick="abrirVideo('LpsgjNLubAU')">
+                                <img src="https://i.ytimg.com/vi/LpsgjNLubAU/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLA3i-t_wUaCKEu-aGbJ2Fq9iFnwkQ" alt="">
+                                <div class="card-number">3</div>
+                            </a>
+                        </div>
+
+                       
+                        <div class="carousel-item">
+                            <a href="#" class="card" onclick="abrirVideo('czeEmoyIc7s')">
+                                <img src="https://i.ytimg.com/vi/czeEmoyIc7s/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLByRDh-LeG6ZH8NRCCAwGnXIPfh3Q" alt="">
+                                <div class="card-number">4</div>
+                            </a>
+                        </div>
+
+                        
+                        <div class="carousel-item">
+                            <a href="#" class="card" onclick="abrirVideo('qOFDleLoozE')">
+                                <img src="https://i.ytimg.com/vi/qOFDleLoozE/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLAops-6RO_LdJVeyCp_pKTsytRrDA" alt="">
+                                <div class="card-number">5</div>
+                            </a>
+                        </div>
+
+               
+                        <div class="carousel-item">
+                            <a href="#" class="card" onclick="abrirVideo('lBDDMrUCz1A')">
+                                <img src="https://i.ytimg.com/vi/lBDDMrUCz1A/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLBEaXhkA_AWzgDDlXNdfZ_FtQfQww" alt="">
+                                <div class="card-number">6</div>
+                            </a>
+                        </div>
+
+                       
+                        <div class="carousel-item">
+                            <a href="#" class="card" onclick="abrirVideo('T67WZx7CxY8&t')">
+                                <img src="https://i.ytimg.com/vi/T67WZx7CxY8/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLCzMWNasHznqzw3gZz0qpI0kg6pew" alt="">
+                                <div class="card-number">7</div>
+                            </a>
+                        </div>
+
+                        
+                        <div class="carousel-item">
+                            <a href="#" class="card" onclick="abrirVideo('OV2k4gZnD38')">
+                                <img src="https://i.ytimg.com/vi/OV2k4gZnD38/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLC93UjKGNCAgID-WEKLrqxk6Bdw3Q" alt="">
+                                <div class="card-number">8</div>
+                            </a>
+                        </div>
+
+                        
+                        <div class="carousel-item">
+                            <a href="#" class="card" onclick="abrirVideo('y15gPbntaLE')">
+                                <img src="https://i.ytimg.com/vi/y15gPbntaLE/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLB1qoNKohc2FnV37zIVI4OZPLLJiQ" alt="">
+                                <div class="card-number">9</div>
+                            </a>
+                        </div>
+
+                    
+                        <div class="carousel-item">
+                            <a href="#" class="card" onclick="abrirVideo('L5JjSzX8Rc0')">
+                                <img src="https://i.ytimg.com/vi/L5JjSzX8Rc0/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLD1AzRVoNFRttwFGO0byim4AGg8Mg" alt="">
+                                <div class="card-number">10</div>
+                            </a> 
+                        </div>
+                         
+                    </div>
+
+                </div>
+            </div>
+  
+        </section>
+    </div>
+
+</div>
+
+    
+  <a href="https://wa.me/553230036061?text=Ol%C3%A1%20Nossa%20Sertaneja!" target="_blank" class="banner-whatsapp-link" style="background-image: url('imagens/comercial.png');">
+    </a>
+  
+    <div id="videoModal" class="video-modal">
+        <div class="video-content">
+            <span class="fechar" onclick="fecharVideo()">&times;</span>
+            <iframe id="iframeVideo" width="100%" height="500" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>  
+
+    <div id="cookie-consent" class="cookie-consent">
+        <div class="cookie-content">
+            <p>Nós utilizamos cookies para melhorar sua experiência em nosso site. Ao continuar navegando, você concorda com a nossa <a href="politica-de-privacidade.html">Política de Privacidade</a>.</p>
+            <button id="accept-cookies" class="btn-accept-cookies">ACEITAR</button>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="imagens/Design sem nome.png" alt="Nossa Sertaneja">
+            </div>
+
+            <div class="footer-section footer-contacts">
+                <h2 class="highlight-brown">Contatos</h2>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>0800 366 3232</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>contato@nossasertaneja.com.br</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>
+                            Minas Gerais / MG
+                    </div>
+                </div>
+            </div>
+
+        
+            <div class="footer-section footer-phone">
+                <div class="phone-mockup">
+                    <div class="phone-screen">
+                        <img src="imagens/app.jpeg" alt="Nossa Sertaneja App" class="phone-app-image">
+                    </div>
+                </div>
+            </div>
+            <div class="footer-section footer-about">
+                <h2>Baixe nosso<br><span class="highlight-brown">Aplicativo</span></h2>
+                <p class="about-text">
+                    Leve a Nossa Sertaneja para onde você for! Baixe agora nosso app oficial para ouvir a melhor programação sertaneja ao vivo, participar de promoções exclusivas e ficar por dentro de todas as novidades. É a rádio da alegria, agora na palma da sua mão!
+                </p>
+
+        <div class="app-badges">
+        <a href="https://play.google.com/store/apps/details?id=com.nossasertaneja.app&hl=pt_BR" target="_blank" rel="noopener noreferrer" aria-label="Baixar no Google Play" class="app-badge-link">
+          <img src="imagens/play-store-black.png" alt="Disponível no Google Play" class="app-badge-img">
+        </a>
+        <a href="https://apps.apple.com/br/search?term=nossa+sertaneja" target="_blank" rel="noopener noreferrer" aria-label="Baixar na App Store" class="app-badge-link">
+          <img src="imagens/app-store-black.png" alt="Baixar na App Store" class="app-badge-img">
+        </a>
+      </div>
+
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-bottom-container">
+                <div class="footer-copyright">
+                    <p>2026 - Todos os direitos reservados</p>
+                    <p>Nossa Sertaneja - É minha, é sua, é nossa!</p>
+                </div>
+                <div class="footer-social">
+                    <a href="https://web.facebook.com/people/Nossa-Fm-tv/pfbid02EXT4iPZtWsGoLwrueUK7NMqjXmFzvfWW3a5aTkB7E5K9QQ4nwMFrXoGiWbuAAMy5l/?fb_profile_edit_entry_point=%7B%22click_point%22%3A%22edit_profile_button%22%2C%22feature%22%3A%22profile_header%22%7D&sk=about" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://x.com/nossafm973/" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/nossasertaneja/" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/5508003663232?text=Olá%20Nossa%20Sertaneja!" target="_blank" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+       <script src="script.js?v=1.5"></script>
+    <script src="script1.js?v=1.5"></script>
+    <script src="js/dynamic_sections.js?v=1.5"></script>
+    <script src="radio_player_dynamic.js?v=1.5"></script>
+    <script src="news_data.js?v=1.5"></script>
+    <script src="carrossel_noticias.js?v=1.5"></script>
+<script>
+      setTimeout(() => {
+    const splash = document.getElementById("splash");
+    if (splash) {
+      splash.style.opacity = "0";
+      splash.style.transition = "opacity 0.3s ease";
+      setTimeout(() => {
+        splash.style.display = "none";
+      }, 300);
+    }
+  }, 3000);
+
+  window.addEventListener("load", function() {
+    const splash = document.getElementById("splash");
+    if (splash) {
+      splash.style.opacity = "0";
+      splash.style.transition = "opacity 0.3s ease";
+      setTimeout(() => splash.style.display = "none", 300);
+    }
+  });
+  function abrirVideo(videoID) {
+  event.preventDefault();
+  const modal = document.getElementById("videoModal");
+  modal.classList.add("active");
+  document.getElementById("iframeVideo").src =
+    "https://www.youtube.com/embed/" + videoID + "?autoplay=1";
+  return false;
+}
+
+function fecharVideo() {
+  const modal = document.getElementById("videoModal");
+  modal.classList.remove("active");
+  document.getElementById("iframeVideo").src = "";
+}
+
+function playTV() {
+    const iframe = document.getElementById('tv-iframe');
+    const placeholder = document.getElementById('tv-placeholder');
+    const playBtn = document.getElementById('play-tv-btn');
+    const videoWrapper = document.getElementById('tv-player-container'); 
+    
+    if (iframe && iframe.style.display === 'none') {
+        if (window.miniPlayer && window.miniPlayer.isPlaying) {
+            window.miniPlayer.togglePlay();
+        }
+        
+        iframe.src = iframe.getAttribute('data-src');
+        iframe.style.display = 'block';
+        placeholder.style.display = 'none';
+        playBtn.style.display = 'none';
+        if (videoWrapper) { 
+            videoWrapper.classList.add('no-border-radius'); 
+        }
+    }
+}
+
+function stopTV() {
+    const iframe = document.getElementById('tv-iframe');
+    const placeholder = document.getElementById('tv-placeholder');
+    const playBtn = document.getElementById('play-tv-btn');
+    const videoWrapper = document.getElementById('tv-player-container');
+    
+    if (iframe && iframe.style.display !== 'none') {
+        iframe.src = "";
+        iframe.style.display = 'none';
+        placeholder.style.display = 'block';
+        playBtn.style.display = 'flex';
+        if (videoWrapper) { 
+            videoWrapper.classList.remove('no-border-radius'); 
+        }
+    }
+}
+
+
+document.getElementById('tv-player-container').addEventListener('click', function() {
+    playTV();
+});
+</script>
+</body>
+</html>

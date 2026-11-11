@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TXRWDXM2TS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-TXRWDXM2TS');
+</script>
+    <meta name="robots" content="noindex, nofollow">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <title>Detalhes da Notícia - Nossa Sertaneja</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css?v=4.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="shortcut icon" href="imagens/Design sem nome (4).png" type="image/png">
+    <link rel="icon" href="imagens/Design sem nome (4).png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --ns-black: #111111;
+            --ns-orange: #ff7b00;
+            --ns-white: #ffffff;
+        }
+
+        body {
+            background-color: #000;
+            color: #333;
+            margin: 0;
+        }
+        .prog-banner-section {
+            position: relative;
+            width: 100%;
+            height: 350px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .prog-banner-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+        }
+
+        .prog-banner-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.8) 100%);
+            z-index: 2;
+        }
+
+        .banner-decor-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .banner-decor-item {
+            position: absolute;
+            opacity: 0.4;
+        }
+
+        .decor-rotate {
+            animation: banner-rotate 15s linear infinite;
+        }
+
+        .decor-float {
+            animation: banner-float 6s ease-in-out infinite;
+        }
+
+        .decor-1 { top: 10%; left: 35%; width: 200px; }
+        .decor-2 { top: 60%; left: 15%; width: 220px; }
+        .decor-3 { top: 20%; right: 10%; width: 100px; }
+        .decor-4 { top: 66%; right: 5%; width: 390px; }
+        .decor-5 { top: 40%; left: 66%; width: 200px; opacity: 0.2; }
+
+        @keyframes banner-rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        @keyframes banner-float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .prog-banner-content {
+            position: relative;
+            z-index: 3;
+            text-align: center;
+            width: 100%;
+            max-width: 1200px;
+            padding: 0 20px;
+        }
+
+        .prog-banner-content h2 {
+            font-size: 64px;
+            font-weight: 900;
+            margin-bottom: 15px;
+            color: #fff;
+            text-transform: none;
+            font-family: 'Roboto Slab', serif;
+        }
+
+        .prog-breadcrumb {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            
+        }
+
+        .prog-breadcrumb a {
+            color: #D07600;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .prog-breadcrumb a:hover {
+            color: #fff;
+        }
+
+        .prog-breadcrumb span {
+            color: #ea974b;
+        }
+
+        .prog-breadcrumb .separator {
+            color: #fff;
+            margin: 0 5px;
+        }
+
+        .prog-mini-icon {
+            width: 30px;
+            height: 30px;
+            object-fit: contain;
+            margin-right: 5px;
+        }
+
+        .breadcrumb-item-wrapper {
+            display: flex;
+            align-items: center;
+        }
+        .noticia-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            display: grid;
+            grid-template-columns: 1fr 320px;
+            gap: 30px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .noticia-content {
+            background: transparent;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: none;
+        }
+
+        .noticia-header {
+            margin-bottom: 30px;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            padding-bottom: 20px;
+        }
+
+        .noticia-category {
+            display: inline-block;
+            background: #D07600;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 4px;
+            font-size: 18px;
+            font-weight: 900;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            margin-right: 20px;
+        }
+
+        .noticia-date {
+            font-size: 16px;
+            color: #ccc;
+            margin-bottom: 15px;
+        }
+
+        .noticia-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+
+        .noticia-body {
+            font-family: 'Roboto Slab', serif;
+            font-size: 16px;
+            line-height: 1.8;
+            color: #fff;
+        }
+
+        .noticia-body p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+        .noticia-sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .sidebar-widget {
+            background: #fff;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .widget-title {
+            font-size: 18px;
+            font-weight: 900;
+            color: #000;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .widget-title::before {
+            content: '';
+            width: 6px;
+            height: 20px;
+            background: #D07600;
+            display: block;
+            border-radius: 2px;
+        }
+
+        .related-post-item {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .related-post-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .related-post-item:hover {
+            transform: translateX(5px);
+        }
+
+        .related-post-thumb {
+            width: 80px;
+            height: 60px;
+            border-radius: 8px;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        .related-post-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .related-post-info h5 {
+            font-size: 14px;
+            font-weight: 700;
+            color: #333;
+            line-height: 1.3;
+            margin: 0 0 5px 0;
+        }
+
+        .related-post-info span {
+            font-size: 11px;
+            color: #D07600;
+            font-weight: 700;
+        }
+        @media (max-width: 900px) {
+            .noticia-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .prog-banner-section {
+                height: 350px; 
+                padding-top: 60px;
+            }
+            .prog-banner-content {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+            .prog-banner-content h2 {
+                font-size: 28px;
+                line-height: 1.3;
+                margin-bottom: 20px;
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+                hyphens: auto;
+            }
+            .prog-breadcrumb {
+                font-size: 14px;
+            }
+            .noticia-image {
+                height: 250px;
+            }
+        
+            .banner-decor-container {
+                display: none;
+            }
+            
+            .floating-highlight-container {
+                position: static;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                display: flex;
+                justify-content: center;
+                z-index: 5;
+            }
+            
+            .floating-highlight-container .big-mic-hat {
+                width: 120px;
+                height: auto;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .prog-banner-section {
+                height: 350px;
+            }
+            .prog-banner-content h2 {
+                font-size: 24px;
+                line-height: 1.2;
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+            }
+            
+            .floating-highlight-container .big-mic-hat {
+                width: 100px;
+            }
+        }
+
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: #999;
+        }
+
+        .error {
+            background: #f8d7da;
+            color: #721c24;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+
+<body>
+<button id="backToTop" class="back-to-top">
+  <i class="fas fa-chevron-up"></i>
+</button>
+
+  <nav id="sub">
+  <div id="social">
+    <ul>
+  <li><a href="https://web.facebook.com/people/Nossa-Fm-tv/pfbid02EXT4iPZtWsGoLwrueUK7NMqjXmFzvfWW3a5aTkB7E5K9QQ4nwMFrXoGiWbuAAMy5l/?fb_profile_edit_entry_point=%7B%22click_point%22%3A%22edit_profile_button%22%2C%22feature%22%3A%22profile_header%22%7D&sk=about" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
+      <li><a href="https://www.instagram.com/nossasertaneja/" target="_blank"><i class="fa-brands fa-instagram"></a></i></li>
+      <li><a href="https://x.com/nossafm973/" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
+      <li> <a href="https://wa.me/5508003663232?text=Olá%20Nossa%20Sertaneja!" target="_blank"><i class="fa-brands fa-whatsapp"></i></a></li>
+    </ul>
+  </div>
+
+   <div class="top-player">
+                <div class="play-container-new">
+                    <button id="main-play-btn" class="play-circle-red">
+                        <i class="fas fa-play"></i>
+                    </button>
+                </div>
+                
+                <div class="player-info-new">
+                    <div class="status-text-new"><span class="dot">●</span> <span class="live-dot"></span>AO VIVO</div>
+                    <div id="programa-mini" class="program-name-new"></div>
+                    <div id="programa-horario" class="program-time-new"></div>
+                </div>
+
+                <div class="city-selector-new">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <select id="city-selector" class="city-select-new">
+                       <option value="https://8541.brasilstream.com.br/stream?origem=site">MACAPÁ 100.5 FM</option>
+                       <option value="https://8516.brasilstream.com.br/stream?origem=site">SETE LAGOAS 107.7 FM</option>
+                        <option value="https://8500.brasilstream.com.br/stream?origem=site">BARBACENA 99.7 FM</option>
+                        <option value="https://8504.brasilstream.com.br/stream?origem=site">LAMBARI 107.1 FM</option>
+                        <option value="https://8502.brasilstream.com.br/stream?origem=site">BUENO BRANDÃO 102.5 FM</option>
+                        <option value="https://8514.brasilstream.com.br/stream?origem=site">PRADÓPOLIS 88.5 FM</option>
+                        <option value="https://8498.brasilstream.com.br/stream?origem=site">PARACATU 97.3 FM</option> 
+                    </select>
+                </div>
+
+                <div id="locutor-box-new">
+                    <img src="imagens/henrique.png" alt="Locutor" class="locutor-thumb-new" id="dj-image-mini">
+                    <div class="locutor-info-new">
+                        <span class="locutor-name-new" id="dj-name-mini"></span>
+                    </div>
+                </div>
+            </div>
+</nav>
+
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="nav-logo">
+            </div>
+            <button class="menu-toggle" id="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li class="menu-close-li"><button class="menu-close-btn" id="menu-close-btn"><i class="fas fa-times"></i></button></li>
+                <li><a href="index.html">NOSSA SERTANEJA</a></li>
+                <li><a href="#premios">PROMOÇÕES</a></li>
+                <li><a href="noticias.html">NOTÍCIAS</a></li>
+                <li><a href="programacao.html">PROGRAMAÇÃO</a></li>
+                <li><a href="nossatv.html">NOSSA TV</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+
+          
+        </div>
+    </header>
+
+    <section class="prog-banner-section">
+        <img src="imagens/banner1.png" alt="Banner Notícia" class="prog-banner-img" onerror="this.style.display='none'">
+    
+        <div class="banner-decor-container">
+            <img src="imagens/sem fundo x.png" alt="Decor" class="banner-decor-item decor-1 decor-rotate" onerror="this.style.display='none'">
+            <img src="imagens/sem fundo x.png" alt="Decor" class="banner-decor-item decor-2 decor-float" onerror="this.style.display='none'">
+            <img src="imagens/sem fundo x.png" alt="Decor" class="banner-decor-item decor-3 decor-float" onerror="this.style.display='none'">
+            <img src="imagens/sem fundo x.png" alt="Decor" class="banner-decor-item decor-4 decor-rotate" onerror="this.style.display='none'">
+            <img src="imagens/sem fundo x.png" alt="Decor" class="banner-decor-item decor-5 decor-float" onerror="this.style.display='none'">
+        </div>
+
+        <div class="prog-banner-overlay"></div>
+        <div class="prog-banner-content">
+            <h2 id="banner-title">Carregando...</h2>
+
+        </div>
+    </section>
+
+  <div class="floating-highlight-container">
+      <img src="imagens/sem fundo.png" alt="Microfone Sertanejo" class="big-mic-hat">
+    </div>
+
+    <div class="noticia-container">
+        <div class="noticia-content" id="noticia-content">
+            <div class="loading">
+                <p>Carregando notícia...</p>
+            </div>
+        </div>
+
+        <div class="noticia-sidebar">
+            <div class="sidebar-widget">
+                <h3 class="widget-title">Notícias Relacionadas</h3>
+                <div id="related-posts"></div>
+            </div>
+        </div>
+    </div>
+   <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="imagens/Design sem nome.png" alt="Nossa Sertaneja">
+            </div>
+
+            <div class="footer-section footer-contacts">
+                <h2 class="highlight-brown">Contatos</h2>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>0800 366 3232</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>contato@nossasertaneja.com.br</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>
+                            Minas Gerais / MG
+                    </div>
+                </div>
+            </div>
+
+        
+            <div class="footer-section footer-phone">
+                <div class="phone-mockup">
+                    <div class="phone-screen">
+                        <img src="imagens/app.jpeg" alt="Nossa Sertaneja App" class="phone-app-image">
+                    </div>
+                </div>
+            </div>
+            <div class="footer-section footer-about">
+                <h2>Baixe nosso<br><span class="highlight-brown">Aplicativo</span></h2>
+                <p class="about-text">
+                    Leve a Nossa Sertaneja para onde você for! Baixe agora nosso app oficial para ouvir a melhor programação sertaneja ao vivo, participar de promoções exclusivas e ficar por dentro de todas as novidades. É a rádio da alegria, agora na palma da sua mão!
+                </p>
+            
+          <div class="app-badges">
+        <a href="https://play.google.com/store/search?q=nossa+sertaneja&c=apps" target="_blank" rel="noopener noreferrer" aria-label="Baixar no Google Play" class="app-badge-link">
+          <img src="imagens/play-store-black.png" alt="Disponível no Google Play" class="app-badge-img">
+        </a>
+        <a href="https://apps.apple.com/br/search?term=nossa+sertaneja" target="_blank" rel="noopener noreferrer" aria-label="Baixar na App Store" class="app-badge-link">
+          <img src="imagens/app-store-black.png" alt="Baixar na App Store" class="app-badge-img">
+        </a>
+      </div>
+
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-bottom-container">
+                <div class="footer-copyright">
+                    <p>2026 - Todos os direitos reservados</p>
+                    <p>Nossa Sertaneja - É minha, é sua, é nossa!</p>
+                </div>
+                <div class="footer-social">
+                    <a href="https://web.facebook.com/people/Nossa-Fm-tv/pfbid02EXT4iPZtWsGoLwrueUK7NMqjXmFzvfWW3a5aTkB7E5K9QQ4nwMFrXoGiWbuAAMy5l/?fb_profile_edit_entry_point=%7B%22click_point%22%3A%22edit_profile_button%22%2C%22feature%22%3A%22profile_header%22%7D&sk=about" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://x.com/nossafm973/" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/nossasertaneja/" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/5508003663232?text=Olá%20Nossa%20Sertaneja!" target="_blank" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="radio_player_dynamic.js?v=1.5"></script>
+    <script src="script.js?v=1.5"></script>
+    <script src="script1.js?v=1.5"></script>
+    <script src="carregar_detalhes_noticia.js?v=1.5"></script>
+</body>
+</html>
